@@ -2,19 +2,9 @@
 <html lang="en">
 
 <head>
-  <!--
-    charset="UTF-8" tells the browser to use UTF-8 encoding.
-    This means it can understand all characters — English, symbols, emojis, etc.
-    Without this, special characters might show as garbled text.
-  -->
+  
   <meta charset="UTF-8" />
 
-  <!--
-    viewport meta tag is CRITICAL for mobile responsiveness.
-    Without it, mobile browsers zoom out and show a shrunken desktop view.
-    width=device-width  → the page width matches the device screen width.
-    initial-scale=1.0   → no zoom on load.
-  -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- What shows in the browser tab and in Google search results -->
@@ -145,7 +135,7 @@
       <div class="hero__socials">
 
         <a
-          href="#"
+          href="https://github.com/peter7450"
           class="social-link"
           aria-label="GitHub profile"
           target="_blank"
@@ -164,7 +154,7 @@
         </a>
 
         <a
-          href="#"
+          href="www.linkedin.com/in/oluwanifemi-akinwumi-ab1b5a3a2"
           class="social-link"
           aria-label="LinkedIn profile"
           target="_blank"
@@ -181,7 +171,7 @@
         </a>
 
         <a
-          href="#"
+          href="mailto:nifemidev443@gmail.com"
           class="social-link"
           aria-label="Send me an email"
         >
@@ -249,22 +239,18 @@
             Self-taught. Lagos-based.<br />Building since 2018.
           </h2>
 
-          <!--
-            Your bio — written in your voice, not corporate-speak.
-            Three short paragraphs read better than one long block.
-            Each paragraph makes one clear point.
-          -->
+          
           <div class="about__bio">
             <p>
               I'm a self-taught Frontend Developer from Lagos, Nigeria. I wrote my
-              first line of code at 17, in 2018 — not because someone told me to,
+              first line of code at 17, in 2018 not because someone told me to,
               but because I wanted to build something I could see working. That
               feeling of watching an idea come to life in a browser hooked me
               immediately and has never let go.
             </p>
             <p>
               What I love most about frontend development is the intersection of
-              logic and experience. I think constructively when I code — breaking
+              logic and experience. I think constructively when I code breaking
               problems down, understanding the why behind every decision, and
               making sure the end result actually makes sense to the person using it.
             </p>
@@ -276,13 +262,7 @@
           </div>
 
           <!--
-            Quick facts — a scannable row of short details.
-            Recruiters and visitors often skim before they read.
-            These give them the key points at a glance.
-
-            Each fact uses a <dt> (definition term) and <dd> (definition detail).
-            <dl> is a description list — the semantically correct element for
-            key-value pairs like these.
+            Quick facts 
           -->
           <dl class="about__facts">
             <div class="about__fact">
@@ -328,8 +308,7 @@
       </div>
 
       <!--
-        Projects grid — three cards side by side on desktop,
-        stacking to one column on mobile.
+        Projects grid 
       -->
       <div class="projects__grid">
 
@@ -365,7 +344,7 @@
 
           <p class="card__desc">
             Search any GitHub username and instantly view their profile stats,
-            public repositories, follower count, and top languages — all pulled
+            public repositories, follower count, and top languages all pulled
             live from the GitHub API.
           </p>
 
@@ -374,8 +353,7 @@
             Styled as small pill badges in CSS.
           -->
           <ul class="card__tags" aria-label="Technologies used">
-            <li><span class="tag">HTML</span></li>
-            <li><span class="tag">CSS</span></li>
+            <li><span class="tag">React</span></li>
             <li><span class="tag">JavaScript</span></li>
             <li><span class="tag">GitHub API</span></li>
             <li><span class="tag">Fetch / Async</span></li>
@@ -536,16 +514,6 @@
     ============================================================
     SKILLS SECTION
     ============================================================
-    An icon grid — no progress bars.
-    Each skill is a card with a Devicon logo + the tool name.
-
-    Skills are split into two groups using a <div class="skills__group">
-    for each. This creates visual separation between languages and tools
-    without needing a table or complex layout.
-
-    Why <ul> and <li> for the skill cards?
-    Skills are a list. Using semantic list elements means screen readers
-    announce "list of 5 items" and enumerate them — better accessibility.
   -->
   <section class="skills section" id="skills">
     <div class="skills__container">
@@ -560,18 +528,12 @@
       </div>
 
       <!--
-        GROUP 1 — Languages & Frameworks
-        These are the things you write code IN.
+        GROUP 1 
       -->
       <div class="skills__group">
         <h3 class="skills__group-label">Languages &amp; Frameworks</h3>
 
-        <!--
-          &amp; is the HTML entity for the ampersand character &.
-          In HTML, & starts special character codes (entities), so
-          writing a literal & in text should be written as &amp;
-          to avoid confusing the browser parser.
-        -->
+      
         <ul class="skills__grid">
 
           <li class="skill-card">
@@ -663,19 +625,6 @@
     ============================================================
     CONTACT SECTION
     ============================================================
-    Two parts:
-    1. Left — a direct email link + social links (for people who
-       prefer to reach out themselves without filling a form)
-    2. Right — a contact form (for people who prefer a structured message)
-
-    Having both removes friction. Some people hate forms, some people
-    hate opening their mail client. You cover both.
-
-    The form uses action="https://formspree.io/f/YOUR_ID" which is a
-    free service that receives form submissions and emails them to you —
-    no backend or server code needed.
-    Sign up at formspree.io, create a form, and replace YOUR_ID with
-    the ID they give you. Until then, the form has action="#" (does nothing).
   -->
   <section class="contact section" id="contact">
     <div class="contact__container">
@@ -697,9 +646,6 @@
 
           <!--
             Direct email link.
-            href="mailto:" opens the user's default email client
-            with the To field pre-filled. No backend needed.
-            It's the most reliable contact method on a portfolio.
           -->
           <a href="mailto:nifemidev443@gmail.com" class="contact__email">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
@@ -748,29 +694,12 @@
 
         <!-- RIGHT — Contact form -->
         <div class="contact__form-col">
-          <!--
-            method="POST" — form data is sent in the request body,
-            not visible in the URL (unlike method="GET").
-            For contact forms, POST is always correct.
 
-            action="#" — replace with your Formspree endpoint:
-            action="https://formspree.io/f/YOUR_FORM_ID"
-            Sign up free at formspree.io to get your ID.
-          -->
           <form class="contact__form" method="POST" action="#" id="contactForm" novalidate>
 
-            <!--
-              novalidate on the form disables the browser's built-in
-              validation popups (which look different in every browser).
-              We handle validation ourselves in main.js for a consistent look.
-            -->
 
             <div class="form__group">
-              <!--
-                <label> is linked to its <input> via for="name" matching id="name".
-                This means clicking the label focuses the input — better UX.
-                It's also required for screen readers to announce what the field is.
-              -->
+            
               <label for="name" class="form__label">Your Name</label>
               <input
                 type="text"
@@ -781,10 +710,7 @@
                 required
                 autocomplete="name"
               />
-              <!--
-                .form__error is hidden by default (display: none in CSS).
-                JS shows it with a message if validation fails.
-              -->
+              
               <span class="form__error" id="nameError"></span>
             </div>
 
@@ -804,11 +730,7 @@
 
             <div class="form__group">
               <label for="message" class="form__label">Message</label>
-              <!--
-                <textarea> is the correct element for multi-line text input.
-                rows="5" sets the default visible height (5 lines).
-                resize="vertical" in CSS lets users drag it taller if needed.
-              -->
+              
               <textarea
                 id="message"
                 name="message"
@@ -820,11 +742,7 @@
               <span class="form__error" id="messageError"></span>
             </div>
 
-            <!--
-              type="submit" triggers the form's submit event.
-              The button text changes to "Sending..." via JS while the
-              form is being submitted, giving the user feedback.
-            -->
+         
             <button type="submit" class="btn btn--primary form__submit" id="submitBtn">
               Send Message
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -836,8 +754,7 @@
             </button>
 
             <!--
-              Success message — hidden until form submits successfully.
-              JS toggles its visibility.
+              Success message 
             -->
             <p class="form__success" id="formSuccess" aria-live="polite">
               Message sent! I'll get back to you as soon as possible.
@@ -855,12 +772,6 @@
     ============================================================
     FOOTER
     ============================================================
-    Minimal — just copyright and social links.
-    <footer> is a semantic HTML5 element that tells browsers and
-    screen readers this is the end-of-page information.
-
-    new Date().getFullYear() in the script below keeps the year
-    current automatically — no need to update it every January.
   -->
   <footer class="footer">
     <div class="footer__container">
