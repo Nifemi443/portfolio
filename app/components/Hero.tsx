@@ -116,14 +116,17 @@ export default function Hero() {
           initial={{ opacity: 0, y: 28, rotate: 2 }}
           animate={{ opacity: 1, y: 0, rotate: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="order-1 mx-auto w-full max-w-[390px] lg:order-2 lg:max-w-none"
+          className="avatar-wrap relative order-1 mx-auto w-full max-w-[390px] lg:order-2 lg:max-w-none"
         >
-          <div className="relative aspect-[3/4] rounded-[2.5rem] border-[0.5px] border-line bg-[#faf8f3]/45 p-3 shadow-[0_34px_120px_rgba(20,18,16,0.18)]">
+          <div
+            className="absolute left-0 top-0 z-20 rounded-[100px] border-[0.5px] border-[rgba(24,22,14,0.12)] bg-[#ffffff] px-[0.85rem] py-[0.35rem] text-[0.68rem] font-bold tracking-[0.06em] text-[#18160e] shadow-[0_2px_12px_rgba(0,0,0,0.12)]"
+            style={{ fontFamily: "var(--ff-mono), 'Geist Mono', monospace" }}
+          >
+            Hello 👋
+          </div>
+          <div className="avatar-card relative aspect-[3/4] rounded-[2.5rem] border-[0.5px] border-line bg-[#faf8f3]/45 p-3 shadow-[0_34px_120px_rgba(20,18,16,0.18)]">
             <div className="h-full overflow-hidden rounded-[2rem]">
               <AvatarSVG />
-            </div>
-            <div className="absolute -left-5 top-10 rounded-full border-[0.5px] border-line bg-[#faf8f3]/90 px-5 py-3 text-[0.68rem] font-bold text-ink shadow-[0_2px_10px_rgba(0,0,0,0.10)] backdrop-blur-md">
-              Hello 👋
             </div>
             <div className="absolute bottom-5 left-5 right-5 flex gap-2">
               <span className="mono rounded-[3px] border-[0.5px] border-line bg-[var(--bg3)] px-2 py-[0.2rem] text-[0.55rem] text-[var(--ink3)]">
