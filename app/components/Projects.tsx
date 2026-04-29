@@ -57,11 +57,11 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="mt-16 border-t border-line">
+        <div className="mt-16 border-t-[0.5px] border-line">
           {projects.map((project, index) => (
             <article
               key={project.name}
-              className="group grid gap-6 border-b border-line py-9 md:grid-cols-[72px_1fr_1.2fr_64px] md:items-start"
+              className="group grid gap-6 border-b-[0.5px] border-line py-9 transition-transform duration-[250ms] hover:translate-x-1 md:grid-cols-[72px_1fr_1.2fr_64px] md:items-start"
             >
               <span className="mono text-sm text-muted">
                 {String(index + 1).padStart(2, "0")}
@@ -72,12 +72,12 @@ export default function Projects() {
                   href={project.url}
                   target={project.url.startsWith("http") ? "_blank" : undefined}
                   rel={project.url.startsWith("http") ? "noreferrer" : undefined}
-                  className="serif text-4xl leading-none tracking-[-0.03em] transition group-hover:translate-x-2 group-hover:text-accent md:text-5xl"
+                  className="serif text-4xl leading-none tracking-[-0.03em] transition group-hover:text-accent md:text-5xl"
                 >
                   {project.name}
                 </a>
                 <div className="mt-4">
-                  <span className="mono rounded-full border border-ink/15 px-3 py-1 text-[0.68rem] uppercase tracking-[0.18em] text-muted">
+                  <span className="mono rounded-full border-[0.5px] border-line px-3 py-1 text-[0.68rem] uppercase tracking-[0.18em] text-muted">
                     {project.type}
                   </span>
                 </div>
@@ -102,7 +102,7 @@ export default function Projects() {
                 target={project.url.startsWith("http") ? "_blank" : undefined}
                 rel={project.url.startsWith("http") ? "noreferrer" : undefined}
                 aria-label={`Open ${project.name}`}
-                className="text-3xl transition group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
+                className="text-3xl transition group-hover:-translate-y-1 group-hover:text-accent"
               >
                 ↗
               </a>

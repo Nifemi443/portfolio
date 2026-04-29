@@ -52,23 +52,25 @@ export default function Nav() {
     <header className="fixed left-0 right-0 top-5 z-50 flex justify-center px-4">
       <nav
         aria-label="Primary navigation"
-        className="flex items-center gap-2 rounded-full border border-ink/10 bg-background/72 p-2 shadow-[0_20px_80px_rgba(20,18,16,0.12)] backdrop-blur-xl"
+        className="flex items-center gap-2 rounded-full border border-line bg-background/72 py-[0.3rem] pl-4 pr-[0.3rem] shadow-[0_20px_80px_rgba(20,18,16,0.1)] backdrop-blur-xl"
       >
         <a
           href="#home"
-          className="hidden rounded-full px-4 py-2 text-sm font-bold tracking-tight text-ink sm:block"
+          className="hidden rounded-full py-1.5 pr-1 text-[0.65rem] font-bold tracking-tight text-ink sm:block"
         >
           ayo4dev
         </a>
 
-        <div className="flex items-center gap-1">
+        <span className="hidden h-3 w-px bg-line sm:block" aria-hidden="true" />
+
+        <div className="flex items-center gap-0.5">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
+              className={`rounded-full px-3 py-1.5 text-[0.72rem] font-semibold transition ${
                 activeSection === link.id
-                  ? "bg-ink text-background"
+                  ? "bg-[var(--green)] text-white"
                   : "text-muted hover:bg-ink/5 hover:text-ink"
               }`}
             >
@@ -79,7 +81,7 @@ export default function Nav() {
 
         <a
           href="#contact"
-          className="rounded-full bg-accent px-4 py-2 text-sm font-bold text-background transition hover:bg-ink"
+          className="rounded-full bg-accent px-4 py-1.5 text-[0.72rem] font-bold text-background transition hover:bg-ink"
         >
           Let&apos;s Talk
         </a>
@@ -88,7 +90,7 @@ export default function Nav() {
           type="button"
           onClick={toggleTheme}
           aria-label="Toggle color theme"
-          className="mono rounded-full border border-ink/10 px-3 py-2 text-[0.68rem] font-bold uppercase tracking-[0.12em] text-ink transition hover:border-accent hover:text-accent"
+          className="mono rounded-full border border-line px-2.5 py-1.5 text-[0.6rem] font-bold uppercase tracking-[0.12em] text-ink transition hover:border-accent hover:text-accent"
         >
           Theme
         </button>

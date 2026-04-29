@@ -25,6 +25,20 @@ const item: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.75, ease: "easeOut" } },
 };
 
+const bulletList: Variants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const bulletItem: Variants = {
+  hidden: { opacity: 0, y: 12 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
 export default function Hero() {
   return (
     <section
@@ -71,14 +85,14 @@ export default function Hero() {
             schema to polished UI, and I ship things that matter.
           </motion.p>
 
-          <motion.ul variants={item} className="mt-8 grid gap-3 text-sm font-semibold">
+          <motion.ul variants={bulletList} className="mt-8 grid gap-3 text-sm font-semibold">
             {bullets.map((bullet) => (
-              <li key={bullet} className="flex items-center gap-3">
+              <motion.li key={bullet} variants={bulletItem} className="flex items-center gap-3">
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-accent text-xs text-background">
                   ✓
                 </span>
                 {bullet}
-              </li>
+              </motion.li>
             ))}
           </motion.ul>
 
@@ -104,12 +118,20 @@ export default function Hero() {
           transition={{ duration: 0.9, ease: "easeOut" }}
           className="order-1 mx-auto w-full max-w-[390px] lg:order-2 lg:max-w-none"
         >
-          <div className="relative aspect-[3/4] rounded-[2.5rem] border border-ink/10 bg-white/35 p-3 shadow-[0_34px_120px_rgba(20,18,16,0.18)]">
+          <div className="relative aspect-[3/4] rounded-[2.5rem] border-[0.5px] border-line bg-[#faf8f3]/45 p-3 shadow-[0_34px_120px_rgba(20,18,16,0.18)]">
             <div className="h-full overflow-hidden rounded-[2rem]">
               <AvatarSVG />
             </div>
-            <div className="absolute -left-5 top-10 rounded-full border border-ink/10 bg-background/82 px-5 py-3 text-sm font-bold shadow-2xl backdrop-blur-md">
+            <div className="absolute -left-5 top-10 rounded-full border-[0.5px] border-line bg-[#faf8f3]/90 px-5 py-3 text-[0.68rem] font-bold text-ink shadow-[0_2px_10px_rgba(0,0,0,0.10)] backdrop-blur-md">
               Hello 👋
+            </div>
+            <div className="absolute bottom-5 left-5 right-5 flex gap-2">
+              <span className="mono rounded-[3px] border-[0.5px] border-line bg-[var(--bg3)] px-2 py-[0.2rem] text-[0.55rem] text-[var(--ink3)]">
+                3+ yrs experience
+              </span>
+              <span className="mono rounded-[3px] border-[0.5px] border-line bg-[var(--bg3)] px-2 py-[0.2rem] text-[0.55rem] text-[var(--ink3)]">
+                10+ projects shipped
+              </span>
             </div>
           </div>
         </motion.div>

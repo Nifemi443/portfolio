@@ -4,11 +4,15 @@
 
 :root {
   --background: #f7f4ef;
-  --ink: #0f0d0b;
-  --muted: #665f57;
-  --accent: #1a6b4a;
-  --line: rgba(15, 13, 11, 0.14);
-  --surface: rgba(255, 255, 255, 0.42);
+  --ink: #18160e;
+  --ink2: #665f57;
+  --ink3: #8b8378;
+  --muted: var(--ink2);
+  --green: #1d6648;
+  --accent: var(--green);
+  --line: rgba(24, 22, 14, 0.08);
+  --bg3: #efe9dd;
+  --surface: rgba(250, 248, 243, 0.42);
   --surface-alt: #fbf8f3;
   --section: #141210;
   --section-text: #f7f4ef;
@@ -18,9 +22,13 @@
 [data-theme="dark"] {
   --background: #11100e;
   --ink: #f4efe7;
+  --ink2: #c9c1b7;
+  --ink3: #9f968c;
   --muted: #b8afa5;
-  --accent: #6fb58e;
-  --line: rgba(247, 244, 239, 0.14);
+  --green: #6fb58e;
+  --accent: var(--green);
+  --line: rgba(247, 244, 239, 0.1);
+  --bg3: #211f1b;
   --surface: rgba(255, 255, 255, 0.06);
   --surface-alt: #171512;
   --section: #070706;
@@ -112,14 +120,15 @@ a {
 
 .mesh-gradient {
   background:
-    radial-gradient(circle at 75% 10%, rgba(126, 201, 255, 0.62), transparent 28%),
-    radial-gradient(circle at 95% 18%, rgba(255, 178, 205, 0.52), transparent 25%),
-    radial-gradient(circle at 72% 44%, rgba(167, 231, 194, 0.46), transparent 30%);
-  filter: blur(96px);
+    radial-gradient(circle at 75% 10%, rgba(200, 216, 232, 0.35), transparent 28%),
+    radial-gradient(circle at 95% 18%, rgba(232, 212, 216, 0.35), transparent 25%),
+    radial-gradient(circle at 72% 44%, rgba(196, 220, 200, 0.35), transparent 30%),
+    radial-gradient(circle at 86% 70%, rgba(232, 224, 204, 0.35), transparent 28%);
+  filter: blur(80px);
 }
 
 .marquee-track {
-  animation: scroll 28s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 @keyframes scroll {

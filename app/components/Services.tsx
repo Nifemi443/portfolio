@@ -67,7 +67,7 @@ export default function Services() {
           {services.map((service, index) => (
             <article
               key={service.name}
-              className="group min-h-[270px] border-b border-line p-7 transition hover:bg-accent/[0.055] md:border-r [&:nth-child(3n)]:lg:border-r-0 [&:nth-child(even)]:md:border-r-0 [&:nth-child(even)]:lg:border-r [&:nth-last-child(-n+3)]:lg:border-b-0"
+              className="group min-h-[270px] border-b-[0.5px] border-line p-7 transition hover:bg-accent/[0.055] md:border-r-[0.5px] [&:nth-child(3n)]:lg:border-r-0 [&:nth-child(even)]:md:border-r-0 [&:nth-child(even)]:lg:border-r-[0.5px] [&:nth-last-child(-n+3)]:lg:border-b-0"
             >
               <span className="mono text-xs text-muted">
                 {String(index + 1).padStart(2, "0")}
